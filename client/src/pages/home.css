@@ -1,0 +1,13 @@
+/* Home.css */
+.home-page {
+    background: linear-gradient(45deg, #000000, #4b0082, #00008b);
+    min-height: 100vh;
+    padding: 20px;
+    color: white;
+  }
+  
+  .home-page h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  

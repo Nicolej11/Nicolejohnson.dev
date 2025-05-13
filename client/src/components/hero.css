@@ -1,0 +1,66 @@
+/* Hero Component Styles */
+.hero-container {
+  height: 100vh;
+  background: linear-gradient(45deg, #000000, #4b0082, #00008b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  flex-direction: column; /* Stack the image and text */
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #e0e0e0;
+}
+
+/* Profile Picture Styling */
+.profile-pic {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  object-fit: cover; /* Ensures it fills the circle */
+  border: 3px solid white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Wrapper for the 'I am' text and rotating phrases */
+.phrase-wrapper {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+  margin-left: 1.5rem;
+}
+
+/* "I am" text styling */
+.i-am-text {
+  font-size: 2rem;
+  color: white;
+}
+
+/* Rotating phrases container */
+.rotating-phrase-container {
+  font-size: 2rem;
+  overflow: hidden;
+  height: 2.5rem;
+  position: relative;
+}
+
+/* Rotating phrase animation */
+.rotating-phrase {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Individual phrase styling */
+.phrase-item {
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  color: white;
+}

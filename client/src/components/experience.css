@@ -1,0 +1,74 @@
+/* Experience.css */
+.experience-container {
+    margin: 100px auto;
+    max-width: 800px;
+    text-align: center;
+    color: white;
+    padding: 20px;
+  }
+  
+  .experience-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .experience-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .experience-card h3 {
+    color: white;
+    margin-bottom: 5px;
+  }
+  
+  .role {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color:white;
+  }
+  
+  .duration {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    color: white;
+  }
+  
+  .description {
+    list-style-type: disc;
+    margin-left: 20px;
+    text-align: left;
+    color: white;
+  }
+  
+  .description li {
+    margin-bottom: 5px;
+  }
+
+  .company-link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.company-link:hover {
+  text-decoration: underline;
+}
+
+  
