@@ -47,15 +47,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const contactRoutes = require('./routes/contactRoutes');
 app.use('/api/contact', contactRoutes);
 
-// Serve static files from React
-app.use(express.static(path.join(__dirname, '../client/build')));
-
-// New API route for Vercel
+// ✅ New API route for Vercel - Test Route
 app.get('/api/contact', (req, res) => {
   res.status(200).json({ message: "API is working" });
 });
 
-// Catch-all handler to send back React's index.html for any other routes
+// Serve static files from React
+app.use(express.static(path.join(__dirname, '../client/build')));
+
+// ❌ CATCH ALL should be LAST
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
 });
@@ -64,4 +64,3 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
-
