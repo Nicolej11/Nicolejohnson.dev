@@ -14,17 +14,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Import routes
 const contactRoutes = require('./routes/contactRoutes');
-app.use('/api/contact', contactRoutes);
-
-// ✅ Remove the extra API test route
-// app.get('/api/contact', (req, res) => {
-//   res.status(200).json({ message: "API is working" });
-// });
+app.use('/api/contact', contactRoutes); // This is important
 
 // Serve static files from React
 app.use(express.static(path.join(__dirname, '../client/build')));
 
-// ❌ CATCH ALL should be LAST
+//  Fallback to React index.html
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
 });
