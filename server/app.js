@@ -12,6 +12,11 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.get('/api/contact/test', (req, res) => {
+  res.json({ message: 'Contact API is working!' });
+});
+
+
 // Import routes
 const contactRoutes = require('./routes/contactRoutes');
 app.use('/api/contact', contactRoutes); // This is important
