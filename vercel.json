@@ -13,14 +13,8 @@
       "use": "@vercel/node"
     }
   ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "server/app.js"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/client/build/index.html"
-    }
-  ]
+  "rewrites": [
+  { "source": "/api/(.*)", "destination": "/server/app.js" },
+  { "source": "/(.*)", "destination": "/client/build/index.html" }
+]
 }
